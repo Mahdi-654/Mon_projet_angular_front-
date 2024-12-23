@@ -1,0 +1,54 @@
+<div class="container">
+  <!-- Image en haut -->
+  <div class="image-header">
+    <img src="assets/images/clubafricain.png" alt="Logo Club Africain" />
+  </div>
+
+  <div class="forms-container">
+    <!-- Formulaire de connexion -->
+    <div class="signin-form">
+      <h2 class="title">Connexion</h2>
+      <form (ngSubmit)="loginUser()">
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input
+            type="email"
+            placeholder="Email"
+            [(ngModel)]="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            placeholder="Mot de passe"
+            [(ngModel)]="password"
+            name="password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn solid">
+          Se connecter <i class="fas fa-sign-in-alt"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Panel interactif -->
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Pas encore inscrit ?</h3>
+          <p>
+            Créez un compte maintenant et profitez de toutes nos
+            fonctionnalités exclusives !
+          </p>
+          <a routerLink="/register" class="btn-link">
+            S'inscrire <i class="fas fa-pen"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

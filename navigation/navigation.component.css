@@ -1,0 +1,69 @@
+/* Barre de navigation */
+.navbar {
+    background-color: #C8102E; /* Fond rouge */
+    border-bottom: 2px solid #FFFFFF; /* Bordure blanche */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Texte blanc */
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #F5A623; /* Légère couleur dorée pour le survol */
+}
+
+.navbar-toggler {
+    border-color: #FFFFFF; /* Toggler blanc */
+}
+
+.navbar-toggler-icon {
+    background-color: #FFFFFF; /* Icône du menu en blanc */
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #FFFFFF; /* Liens en blanc */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #C8102E; /* Liens rouges au survol */
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #FFFFFF; /* Fond blanc au survol */
+    color: #C8102E; /* Texte rouge au survol */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    background-color: #C8102E; /* Liens actifs rouges */
+    color: #FFFFFF; /* Texte blanc pour les liens actifs */
+    border-radius: 5px;
+}
+
+/* Barre de navigation sticky */
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+/* Animation du dropdown du menu */
+.navbar-collapse {
+    transition: all 0.3s ease-in-out;
+}

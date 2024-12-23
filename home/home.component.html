@@ -1,0 +1,94 @@
+<div class="container">
+    <!-- Section de l'image en haut -->
+    <div class="image-header">
+        <img src="assets/images/clubafricain.png" alt="Logo Club Africain" />
+    </div>
+
+    <h1>Bienvenue chers Supporters Club Africain 1920</h1>
+
+    <!-- Section des Matchs -->
+    <div class="matchs-list">
+        <h2><i class="fas fa-futbol"></i> Matchs à venir</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Équipe A</th>
+                    <th>Équipe B</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let match of matchs">
+                    <td>{{ match.equipe1 }}</td>
+                    <td>{{ match.equipe2 }}</td>
+                    <td>{{ match.date | date: 'dd/MM/yyyy' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Section du Classement -->
+    <div class="classement-section">
+        <h2><i class="fas fa-trophy"></i> Classement</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Équipe</th>
+                    <th>Points</th>
+                    <th>Matchs Joués</th>
+                    <th>Victoires</th>
+                    <th>Nuls</th>
+                    <th>Défaites</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let classement of classements">
+                    <td>{{ classement.equipe }}</td>
+                    <td>{{ classement.points }}</td>
+                    <td>{{ classement.matchesJoues }}</td>
+                    <td>{{ classement.wins }}</td>
+                    <td>{{ classement.draws }}</td>
+                    <td>{{ classement.losses }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Section des Entraînements -->
+    <div class="trainings-list">
+        <h2><i class="fas fa-calendar-alt"></i> Calendrier des Entraînements</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Durée</th>
+                    <th>Coach</th>
+                    <th>Lieu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let training of trainings">
+                    <td>{{ training.title }}</td>
+                    <td>{{ training.description }}</td>
+                    <td>{{ training.date | date: 'dd/MM/yyyy' }}</td>
+                    <td>{{ training.duration }} minutes</td>
+                    <td>{{ training.coach }}</td>
+                    <td>{{ training.location }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Club Africain 1920. Tous droits réservés.</p>
+        <p>Suivez-nous : 
+            <a href="https://www.facebook.com/ClubAfricain" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/ClubAfricain" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/ClubAfricain" target="_blank"><i class="fab fa-instagram"></i></a>
+        </p>
+    </div>
+</footer>

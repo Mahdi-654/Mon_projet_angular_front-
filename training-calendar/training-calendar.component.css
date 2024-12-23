@@ -1,0 +1,145 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+}
+
+.training-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.form-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  color: #ff0d0d;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-buttons button {
+  width: 48%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #eb0808;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-buttons button:hover {
+  background-color: #ff0000;
+}
+
+button[type="button"] {
+  background-color: #ffffff;
+}
+
+button[type="button"]:hover {
+  background-color: #f8f8f8;
+}
+
+/* Liste des Entraînements */
+.trainings-list-container {
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.trainings-list-container h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #fa0202;
+}
+
+.trainings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.training-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.training-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.training-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.training-card-header strong {
+  font-size: 18px;
+  color: #fdfdfd;
+}
+
+.training-card-body {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #eb4a4a;
+}
+
+.training-card-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.training-card-footer button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.training-card-footer button:hover {
+  background-color: #ff0000;
+}

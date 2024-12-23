@@ -1,0 +1,88 @@
+<div class="container">
+    <h2 class="text-center text-danger mb-4">Modifier le Joueur</h2>
+    <form [formGroup]="joueurForm" (ngSubmit)="onSubmit()" class="shadow-lg p-4 bg-white rounded">
+      
+      <!-- Message d'erreur -->
+      <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  
+      <!-- Nom -->
+      <div class="form-group">
+        <label for="nom" class="font-weight-bold">Nom</label>
+        <input id="nom" formControlName="nom" class="form-control form-control-lg" />
+        <div *ngIf="joueurForm.get('nom')?.invalid && joueurForm.get('nom')?.touched" class="alert alert-danger">
+          Le nom est requis.
+        </div>
+      </div>
+  
+      <!-- Prénom -->
+      <div class="form-group">
+        <label for="prénom" class="font-weight-bold">Prénom</label>
+        <input id="prénom" formControlName="prénom" class="form-control form-control-lg" />
+        <div *ngIf="joueurForm.get('prénom')?.invalid && joueurForm.get('prénom')?.touched" class="alert alert-danger">
+          Le prénom est requis.
+        </div>
+      </div>
+  
+      <!-- Poste -->
+      <div class="form-group">
+        <label for="poste" class="font-weight-bold">Poste</label>
+        <input id="poste" formControlName="poste" class="form-control form-control-lg" />
+        <div *ngIf="joueurForm.get('poste')?.invalid && joueurForm.get('poste')?.touched" class="alert alert-danger">
+          Le poste est requis.
+        </div>
+      </div>
+  
+      <!-- Numéro -->
+      <div class="form-group">
+        <label for="numéro" class="font-weight-bold">Numéro</label>
+        <input id="numéro" type="number" formControlName="numéro" class="form-control form-control-lg" />
+        <div *ngIf="joueurForm.get('numéro')?.invalid && joueurForm.get('numéro')?.touched" class="alert alert-danger">
+          Le numéro est requis et doit être supérieur à 0.
+        </div>
+      </div>
+  
+      <!-- Équipe -->
+      <div class="form-group">
+        <label for="équipe" class="font-weight-bold">Équipe</label>
+        <input id="équipe" formControlName="équipe" class="form-control form-control-lg" />
+        <div *ngIf="joueurForm.get('équipe')?.invalid && joueurForm.get('équipe')?.touched" class="alert alert-danger">
+          L'équipe est requise.
+        </div>
+      </div>
+  
+      <h3 class="text-danger mt-4 mb-3">Statistiques</h3>
+      <div formGroupName="statistiques">
+        <!-- Matchs Joués -->
+        <div class="form-group">
+          <label for="matchsJoués" class="font-weight-bold">Matchs Joués</label>
+          <input id="matchsJoués" type="number" formControlName="matchsJoués" class="form-control form-control-lg" />
+          <div *ngIf="joueurForm.get('statistiques.matchsJoués')?.invalid && joueurForm.get('statistiques.matchsJoués')?.touched" class="alert alert-danger">
+            Le nombre de matchs joués doit être supérieur ou égal à 0.
+          </div>
+        </div>
+  
+        <!-- Buts -->
+        <div class="form-group">
+          <label for="buts" class="font-weight-bold">Buts</label>
+          <input id="buts" type="number" formControlName="buts" class="form-control form-control-lg" />
+          <div *ngIf="joueurForm.get('statistiques.buts')?.invalid && joueurForm.get('statistiques.buts')?.touched" class="alert alert-danger">
+            Le nombre de buts doit être supérieur ou égal à 0.
+          </div>
+        </div>
+  
+        <!-- Passes -->
+        <div class="form-group">
+          <label for="passes" class="font-weight-bold">Passes</label>
+          <input id="passes" type="number" formControlName="passes" class="form-control form-control-lg" />
+          <div *ngIf="joueurForm.get('statistiques.passes')?.invalid && joueurForm.get('statistiques.passes')?.touched" class="alert alert-danger">
+            Le nombre de passes doit être supérieur ou égal à 0.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group d-flex justify-content-between">
+        <button type="submit" class="btn btn-danger btn-lg" [disabled]="joueurForm.invalid">Modifier</button>
+        <button type="button" class="btn btn-secondary btn-lg" (click)="resetForm()">Réinitialiser</button>
+      </div>
+    </form>
+</div>

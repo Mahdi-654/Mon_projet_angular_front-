@@ -1,0 +1,102 @@
+/* Conteneur principal pour le dashboard */
+.dashboard-container {
+  margin-top: 30px;
+}
+
+/* Titre du dashboard */
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #e60000; /* Rouge vif */
+}
+
+/* Cartes (cards) */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  margin-bottom: 20px;
+  transition: transform 0.2s ease; /* Animation pour le hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom léger sur hover */
+}
+
+/* En-têtes des cartes */
+.card-header {
+  background-color: #e60000; /* Rouge vif */
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Corps des cartes */
+.card-body {
+  padding: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Liste des résultats/matchs */
+.card-body ul {
+  list-style-type: none; /* Retirer les puces */
+  padding: 0;
+}
+
+.card-body ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #444;
+}
+
+.card-body ul li span {
+  font-weight: bold;
+  color: #e60000; /* Rouge vif */
+}
+
+/* Tableau des performances */
+.table {
+  margin-top: 20px;
+}
+
+.table th {
+  background-color: #e60000; /* Rouge vif */
+  color: white;
+}
+
+.table td, .table th {
+  text-align: center;
+  padding: 15px;
+}
+
+/* Boutons */
+.dashboard-button {
+  margin-top: 20px;
+  background-color: #e60000; /* Rouge vif */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-button:hover {
+  background-color: #b30000; /* Rouge foncé */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .card {
+    margin-bottom: 15px;
+  }
+}

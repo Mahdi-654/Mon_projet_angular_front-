@@ -1,0 +1,93 @@
+.ajouter-joueur-container {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 2em;
+  color: #e60000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+}
+
+.input-field:focus {
+  border-color: #e60000;
+  outline: none;
+}
+
+.error-message {
+  color: #e60000;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #e60000;
+  color: white;
+}
+
+.submit-btn:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  background-color: #f8f9fa;
+  border: 2px solid #e60000;
+  color: #e60000;
+}
+
+.consulter-btn {
+  background-color: #ff0000;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.1em;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.consulter-btn:hover {
+  background-color: #fcfcfc;
+}

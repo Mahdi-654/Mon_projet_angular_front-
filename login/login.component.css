@@ -1,0 +1,118 @@
+/* Conteneur global */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #f8f9fa, #dc240b);
+}
+
+/* Image en haut */
+.image-header img {
+  display: block;
+  margin: 0 auto 30px;
+  width: 180px; /* Taille de l'image */
+  height: 180px;
+  object-fit: contain;
+  border: 3px solid #dc0808;
+  border-radius: 12px; /* Coins légèrement arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulaires */
+.forms-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.signin-form {
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-size: 24px;
+  color: #e20d0d;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-field i {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #e20d0d;
+  font-size: 18px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-field input:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e20d0d;
+}
+
+.btn-link {
+  color: #e20d0d;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.btn-link i {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+/* Panel interactif */
+.panels-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.panel .content h3 {
+  font-size: 20px;
+  color: #e20d0d;
+}
+
+.panel .content p {
+  font-size: 16px;
+  color: #6c757d;
+}

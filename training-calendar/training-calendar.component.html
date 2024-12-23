@@ -1,0 +1,118 @@
+<!-- Formulaire d'ajout et de modification d'entraînement -->
+<div class="training-form-container">
+  <div class="form-card bg-white shadow-lg rounded p-4">
+    <h2 class="text-center text-danger fw-bold">{{ isEditMode ? 'Modifier un Entraînement' : 'Ajouter un Entraînement' }}</h2>
+    <form (ngSubmit)="isEditMode ? updateTraining(training) : addTraining(training)">
+      <div class="form-group mb-3">
+        <label for="title" class="form-label text-danger">Titre de l'Entraînement</label>
+        <input type="text" id="title" [(ngModel)]="training.title" name="title" placeholder="Titre de l'entraînement" required class="form-control">
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="description" class="form-label text-danger">Description</label>
+        <input type="text" id="description" [(ngModel)]="training.description" name="description" placeholder="Description de l'entraînement" class="form-control">
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="date" class="form-label text-danger">Date</label>
+        <input type="date" id="date" [(ngModel)]="training.date" name="date" required class="form-control">
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="duration" class="form-label text-danger">Durée (en minutes)</label>
+        <input type="number" id="duration" [(ngModel)]="training.duration" name="duration" placeholder="Durée de l'entraînement" required class="form-control">
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="coach" class="form-label text-danger">Coach</label>
+        <input type="text" id="coach" [(ngModel)]="training.coach" name="coach" placeholder="Nom du coach" class="form-control">
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="location" class="form-label text-danger">Lieu</label>
+        <input type="text" id="location" [(ngModel)]="training.location" name="location" placeholder="Lieu de l'entraînement" class="form-control">
+      </div>
+
+      <div class="form-buttons text-center">
+        <button type="submit" class="btn btn-danger w-100 py-2 fw-bold">{{ isEditMode ? 'Mettre à jour' : 'Ajouter' }}</button>
+        <button *ngIf="isEditMode" type="button" class="btn btn-secondary w-100 mt-2" (click)="resetForm()">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Liste des Entraînements -->
+<div class="trainings-list-container mt-5">
+  <h2 class="text-center text-danger mb-4">Liste des Entraînements</h2>
+  <div class="trainings-grid row g-4">
+    <div *ngFor="let training of trainings" class="training-card col-md-4">
+      <div class="training-card-header bg-danger text-white p-3 rounded-top">
+        <strong>{{ training.title }}</strong>
+        <span class="float-end">{{ training.date | date: 'shortDate' }}</span>
+      </div>
+      <div class="training-card-body p-3 bg-light">
+        <p><strong>Durée :</strong> {{ training.duration }} min</p>
+        <p><strong>Coach :</strong> {{ training.coach }}</p>
+        <p><strong>Lieu :</strong> {{ training.location }}</p>
+      </div>
+      <div class="training-card-footer text-center p-2">
+        <button (click)="selectTraining(training)" *ngIf="!isEditMode" class="btn btn-warning w-100 mb-2">Modifier</button>
+        <button *ngIf="training._id" (click)="deleteTraining(training._id)" class="btn btn-danger w-100">Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Styles -->
+<style>
+  .training-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .form-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group input {
+    border-radius: 5px;
+  }
+
+  .form-buttons button {
+    margin-top: 10px;
+  }
+
+  .trainings-list-container {
+    margin-top: 40px;
+  }
+
+  .training-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .training-card-header {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .training-card-footer {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .trainings-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .btn-danger, .btn-warning {
+    border-radius: 5px;
+  }
+
+  .btn-secondary {
+    border-radius: 5px;
+  }
+</style>

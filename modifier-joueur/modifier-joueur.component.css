@@ -1,0 +1,80 @@
+/* Formulaire de modification du joueur */
+.container {
+    max-width: 800px;
+    margin-top: 50px;
+  }
+  
+  h2 {
+    color: #e74c3c;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  h3 {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+  
+  .form-control-lg {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+  
+  .alert-danger {
+    font-size: 0.9rem;
+    color: #dc3545;
+  }
+  
+  button {
+    width: 48%;
+    font-size: 1.1rem;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  
+  .btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+  }
+  
+  .btn-secondary {
+    background-color: #bdc3c7;
+    border-color: #bdc3c7;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #95a5a6;
+  }
+  
+  /* Amélioration de l'apparence du formulaire */
+  .shadow-lg {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .rounded {
+    border-radius: 10px;
+  }
+  
+  .font-weight-bold {
+    font-weight: 600;
+  }
+  

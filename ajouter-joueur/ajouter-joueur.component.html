@@ -1,0 +1,77 @@
+<div class="ajouter-joueur-container">
+    <h2 class="header">{{ currentJoueurId ? 'Modifier un joueur' : 'Ajouter un joueur' }}</h2>
+  
+    <form [formGroup]="joueurForm" (ngSubmit)="onSubmit()" class="form-container">
+      <div class="form-group">
+        <label for="nom" class="label">Nom:</label>
+        <input id="nom" formControlName="nom" type="text" class="input-field" />
+        <div *ngIf="joueurForm.get('nom')?.invalid && joueurForm.get('nom')?.touched" class="error-message">
+          Le nom est requis.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="prenom" class="label">Prénom:</label>
+        <input id="prenom" formControlName="prenom" type="text" class="input-field" />
+        <div *ngIf="joueurForm.get('prenom')?.invalid && joueurForm.get('prenom')?.touched" class="error-message">
+          Le prénom est requis.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="poste" class="label">Poste:</label>
+        <input id="poste" formControlName="poste" type="text" class="input-field" />
+        <div *ngIf="joueurForm.get('poste')?.invalid && joueurForm.get('poste')?.touched" class="error-message">
+          Le poste est requis.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="numero" class="label">Numéro:</label>
+        <input id="numero" formControlName="numero" type="number" class="input-field" />
+        <div *ngIf="joueurForm.get('numero')?.invalid && joueurForm.get('numero')?.touched" class="error-message">
+          Le numéro est requis et doit être supérieur à 0.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="equipe" class="label">Équipe:</label>
+        <input id="equipe" formControlName="equipe" type="text" class="input-field" />
+        <div *ngIf="joueurForm.get('equipe')?.invalid && joueurForm.get('equipe')?.touched" class="error-message">
+          L'équipe est requise.
+        </div>
+      </div>
+  
+      <div formGroupName="statistiques" class="form-group">
+        <label for="matchsJoués" class="label">Matchs Joués:</label>
+        <input id="matchsJoués" formControlName="matchsJoués" type="number" class="input-field" />
+        <div *ngIf="joueurForm.get('statistiques.matchsJoués')?.invalid && joueurForm.get('statistiques.matchsJoués')?.touched" class="error-message">
+          Le nombre de matchs joués doit être supérieur ou égal à 0.
+        </div>
+  
+        <label for="buts" class="label">Buts:</label>
+        <input id="buts" formControlName="buts" type="number" class="input-field" />
+        <div *ngIf="joueurForm.get('statistiques.buts')?.invalid && joueurForm.get('statistiques.buts')?.touched" class="error-message">
+          Le nombre de buts doit être supérieur ou égal à 0.
+        </div>
+  
+        <label for="passes" class="label">Passes:</label>
+        <input id="passes" formControlName="passes" type="number" class="input-field" />
+        <div *ngIf="joueurForm.get('statistiques.passes')?.invalid && joueurForm.get('statistiques.passes')?.touched" class="error-message">
+          Le nombre de passes doit être supérieur ou égal à 0.
+        </div>
+      </div>
+  
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+  
+      <div class="form-buttons">
+        <button type="submit" [disabled]="joueurForm.invalid" class="btn submit-btn">Soumettre</button>
+        <button type="button" (click)="resetForm()" class="btn reset-btn">Réinitialiser</button>
+      </div>
+    </form>
+  
+    <button (click)="goToConsulterJoueur()" class="btn consulter-btn">Consulter les joueurs</button>
+  </div>
+  
